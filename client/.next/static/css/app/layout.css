@@ -1863,6 +1863,9 @@ html{
 .mt-6{
   margin-top: 1.5rem;
 }
+.mt-4{
+  margin-top: 1rem;
+}
 .flex{
   display: flex;
 }
@@ -1916,6 +1919,9 @@ html{
 }
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.items-center{
+  align-items: center;
 }
 .justify-center{
   justify-content: center;

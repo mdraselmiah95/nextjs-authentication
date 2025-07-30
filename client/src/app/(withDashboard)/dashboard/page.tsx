@@ -1,5 +1,6 @@
 import { authOptions } from "@/utils/authOptions";
 import { getServerSession } from "next-auth";
+import Image from "next/image";
 
 const DashboardPage = async () => {
   const session = await getServerSession(authOptions);
@@ -11,6 +12,15 @@ const DashboardPage = async () => {
       <p className="text-2xl text-center mt-5">
         Your Email: {session?.user?.email}
       </p>
+      <div className="flex justify-center items-center mt-4">
+        <Image
+          src={session?.user?.image}
+          width={100}
+          height={100}
+          alt={session?.user?.name}
+          className="rounded-full"
+        />
+      </div>
     </div>
   );
 };
