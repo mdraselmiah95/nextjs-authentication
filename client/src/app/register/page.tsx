@@ -1,8 +1,11 @@
 "use client";
 
+import { registerUser } from "@/utils/actions/registerUser";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 export type UserData = {
   username: string;
@@ -11,6 +14,7 @@ export type UserData = {
 };
 
 const RegisterPage = () => {
+  const route = useRouter();
   const {
     register,
     handleSubmit,
@@ -18,9 +22,15 @@ const RegisterPage = () => {
   } = useForm<UserData>();
 
   const onSubmit = async (data: UserData) => {
-    console.log(data);
-
     try {
+      const res = await registerUser(data);
+      if (res?.success) {
+        toast.success("Registration successful!");
+        route.push("/login");
+      }
+      if (!res.success) {
+        throw new Error(res.message || "Registration failed");
+      }
     } catch (err: any) {
       console.error(err.message);
       throw new Error(err.message);

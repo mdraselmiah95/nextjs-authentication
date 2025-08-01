@@ -1,5 +1,22 @@
 {
-  "node": {},
+  "node": {
+    "a0602fbb4e46e7ee96597409f10cd64a75dbef73": {
+      "workers": {
+        "app/register/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fraselmiah%2FDeveloper%2FProgramming%2FOther-Project%2Fnextjs-authentication%2Fclient%2Fsrc%2Futils%2Factions%2FregisterUser.ts%22%2C%5B%22registerUser%22%2C%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/register/page": "action-browser"
+      }
+    },
+    "ae92dbc6a42019dd8f30b9478740474865619468": {
+      "workers": {
+        "app/register/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fraselmiah%2FDeveloper%2FProgramming%2FOther-Project%2Fnextjs-authentication%2Fclient%2Fsrc%2Futils%2Factions%2FregisterUser.ts%22%2C%5B%22registerUser%22%2C%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/register/page": "action-browser"
+      }
+    }
+  },
   "edge": {},
-  "encryptionKey": "tjnvG7bB1Aa0yIcixjPbhN7ivF5SyMDAiZ5DhjLoEU0="
+  "encryptionKey": "bWWymrZ+QiFSOlZf3KDJvtWiXnBGRHlgFMDPbo1TsEI="
 }

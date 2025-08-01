@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/utils/authOptions";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Next Auth",
@@ -19,6 +20,7 @@ export default async function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body>
+        <Toaster richColors />
         <Navbar session={session} />
         <div className="min-h-screen w-[90%] mx-auto">{children}</div>
       </body>
