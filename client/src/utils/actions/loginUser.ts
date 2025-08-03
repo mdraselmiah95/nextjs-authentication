@@ -1,6 +1,8 @@
 "use server";
 
-export const loginUser = async (data) => {
+import { FormValues } from "@/app/login/page";
+
+export const loginUser = async (data: FormValues) => {
   const res = await fetch(`${process.env.BACKEND_URL}/login`, {
     method: "POST",
     headers: {
